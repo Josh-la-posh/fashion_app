@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sytle_to_perfection/common/widgets/buttons/elevated_button.dart';
 import 'package:sytle_to_perfection/features/authentication/screens/login/login.dart';
+import 'package:sytle_to_perfection/features/authentication/screens/signup/signup.dart';
 import 'package:sytle_to_perfection/utils/constants/colors.dart';
 import 'package:sytle_to_perfection/utils/constants/images.dart';
 import 'package:sytle_to_perfection/utils/constants/sizes.dart';
@@ -131,7 +132,7 @@ class OnboardingFinalScreen extends StatelessWidget {
                         )
                     ),
                     TextButton(
-                      onPressed: (){},
+                      onPressed: (){Get.to(() => const SignupScreen());},
                       child: Text(
                         'Sign up',
                         style: Theme.of(context).textTheme.bodyMedium,

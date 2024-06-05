@@ -12,6 +12,7 @@ class TColors {
   static const Color textWhite = Color(0xFFFCFCFC);
   static const Color secTextWhite = Color(0xFFFDF5ED);
   static const Color formBlackText = Color(0xFF222222);
+  static const Color authGreyText = Color(0xFFB1B1B1);
 
   // Background Container Colors
 

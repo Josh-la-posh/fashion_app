@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../constants/colors.dart';
 import '../constants/texts.dart';
+import 'custom_themes/checkbox_theme.dart';
 import 'custom_themes/elevated_button_theme.dart';
 import 'custom_themes/outlined_button_theme.dart';
 import 'custom_themes/text_field_theme.dart';
@@ -17,7 +18,7 @@ class TAppTheme {
     primaryColor: TColors.primary,
     textTheme: TTextTheme.lightTextTheme,
     scaffoldBackgroundColor: Colors.white,
-    // checkboxTheme: TCheckboxTheme.lightCheckboxTheme,
+    checkboxTheme: TCheckboxTheme.lightCheckboxTheme,
     elevatedButtonTheme: TElevatedButtonTheme.lightElevatedButtonTheme,
     outlinedButtonTheme: TOutlinedButtonTheme.lightOutlinedButtonTheme,
     inputDecorationTheme: TTextFormFieldTheme.lightInputDecorationTheme,
@@ -31,7 +32,7 @@ class TAppTheme {
     primaryColor: TColors.primary,
     textTheme: TTextTheme.darkTextTheme,
     scaffoldBackgroundColor: Colors.black,
-    // checkboxTheme: TCheckboxTheme.darkCheckboxTheme,
+    checkboxTheme: TCheckboxTheme.darkCheckboxTheme,
     elevatedButtonTheme: TElevatedButtonTheme.darkElevatedButtonTheme,
     outlinedButtonTheme: TOutlinedButtonTheme.darkOutlinedButtonTheme,
     inputDecorationTheme: TTextFormFieldTheme.darkInputDecorationTheme,

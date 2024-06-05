@@ -2,11 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sytle_to_perfection/features/authentication/screens/login/login.dart';
 import 'package:sytle_to_perfection/features/authentication/screens/signup/widget/signup_form.dart';
-
 import '../../../../utils/constants/colors.dart';
 import '../../../../utils/constants/images.dart';
 import '../../../../utils/constants/sizes.dart';
-import '../../../../utils/devices/device_utility.dart';
 import '../../../../utils/helpers/helper_functions.dart';
 import '../login/widgets/auth_back_button.dart';
 
@@ -26,21 +24,21 @@ class SignupScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   AuthBackButton(darkMode: darkMode),
-                  const SizedBox(height: TSizes.spaceBtwElements * 2),
+                  SizedBox(height: THelperFunctions.screenHeight() * 0.04),
                   Text(
                     'Create your Account',
                     style: Theme.of(context).textTheme.headlineLarge,
                   ),
-                  const SizedBox(height: TSizes.spaceBtwElements * 2),
+                  SizedBox(height: THelperFunctions.screenHeight() * 0.04),
                   const SignupForm(),
-                  const SizedBox(height: TSizes.spaceBtwElements * 2),
-                  Center(
+                  SizedBox(height: THelperFunctions.screenHeight() * 0.04),
+                  const Center(
                     child: SizedBox(
                       width: 150,
-                      child: const Image(image: AssetImage(TImages.onboardingDivider)),
+                      child: Image(image: AssetImage(TImages.onboardingDivider)),
                     ),
                   ),
-                  const SizedBox(height: TSizes.spaceBtwElements * 2),
+                  SizedBox(height: THelperFunctions.screenHeight() * 0.04),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -63,7 +61,7 @@ class SignupScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const SizedBox(height: TSizes.spaceBtwElements * 4),
+                  SizedBox(height: THelperFunctions.screenHeight() * 0.04),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [

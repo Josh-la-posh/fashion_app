@@ -4,6 +4,8 @@ import 'package:sytle_to_perfection/common/widgets/buttons/elevated_button.dart'
 import 'package:sytle_to_perfection/features/authentication/screens/signup/signup.dart';
 import 'package:sytle_to_perfection/utils/constants/sizes.dart';
 
+import '../../../../../utils/constants/colors.dart';
+
 class LoginForm extends StatefulWidget {
   const LoginForm({super.key});
 
@@ -14,6 +16,7 @@ class LoginForm extends StatefulWidget {
 class _LoginFormState extends State<LoginForm> {
   @override
   Widget build(BuildContext context) {
+    bool? checkboxValue = false;
     return Form(
         child: Column(
           children: [
@@ -31,6 +34,47 @@ class _LoginFormState extends State<LoginForm> {
                   hintText: 'your password ...',
                   labelText: 'Password'
               ),
+            ),
+            const SizedBox(height: TSizes.spaceBtwElements,),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  height: 22,
+                  width: 22,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(6),
+                      color: TColors.textWhite,
+                      border: Border.all(
+                          color: TColors.black,
+                          width: 1
+                      )
+                  ),
+                  child: Checkbox(
+                      value: checkboxValue,
+                      onChanged: (value){
+                        setState(() {
+                          print('check $checkboxValue');
+                          checkboxValue = value;
+                        });
+                      }
+                  ),
+                ),
+                SizedBox(width: TSizes.spaceBtwButtons,),
+                RichText(
+                    text: TextSpan(
+                        style: Theme.of(context).textTheme.bodyMedium,
+                        children: [
+                          TextSpan(
+                              text: 'Remember me',
+                              style: TextStyle(
+                                  color: TColors.authGreyText
+                              )
+                          )
+                        ]
+                    )
+                )
+              ],
             ),
             const SizedBox(height: TSizes.spaceBtwElements,),
             TElevatedButton(onTap: (){}, buttonText: 'SIGN IN')
