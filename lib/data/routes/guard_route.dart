@@ -62,7 +62,8 @@ class _AuthGuardState extends State<AuthGuard> {
   @override
   Widget build(BuildContext context) {
     var authProvider = Provider.of<AuthProvider>(context);
-    if (authProvider.user == null ||
+    if (
+    // authProvider.user == null ||
         UserSession.instance.isLoginBool() == false) {
       Future.delayed(
           const Duration(

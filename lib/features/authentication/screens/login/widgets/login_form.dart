@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:sytle_to_perfection/common/widgets/buttons/elevated_button.dart';
+import 'package:sytle_to_perfection/features/authentication/screens/signup/signup.dart';
+import 'package:sytle_to_perfection/utils/constants/sizes.dart';
 
 class LoginForm extends StatefulWidget {
   const LoginForm({super.key});
@@ -11,7 +15,27 @@ class _LoginFormState extends State<LoginForm> {
   @override
   Widget build(BuildContext context) {
     return Form(
-        child: Text('Login Form')
+        child: Column(
+          children: [
+            TextFormField(
+              style: Theme.of(context).textTheme.bodyMedium,
+              decoration: const InputDecoration(
+                hintText: 'xyz@sop.com',
+                labelText: 'Email'
+              ),
+            ),
+            const SizedBox(height: TSizes.spaceBtwInputFields,),
+            TextFormField(
+              style: Theme.of(context).textTheme.bodyMedium,
+              decoration: const InputDecoration(
+                  hintText: 'your password ...',
+                  labelText: 'Password'
+              ),
+            ),
+            const SizedBox(height: TSizes.spaceBtwElements,),
+            TElevatedButton(onTap: (){}, buttonText: 'SIGN IN')
+          ],
+        ),
     );
   }
 }

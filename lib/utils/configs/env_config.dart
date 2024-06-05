@@ -14,3 +14,5 @@ class EnvConfigurationModule {
   String getApiBaseUrl() {
     return (dotenv.env['API_BASE_URL'] as String);
   }
+
+}

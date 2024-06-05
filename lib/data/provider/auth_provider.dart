@@ -12,7 +12,7 @@ class AuthProvider extends ChangeNotifier {
   late StreamSubscription<void> _notificationSubscription;
 
   AuthProvider._() {
-    _getUserSaveData();
+    // _getUserSaveData();
     _notificationSubscription = Stream.periodic(const Duration(minutes: 5)).listen((event) {
       _processUserNotifications();
     });
@@ -35,87 +35,87 @@ class AuthProvider extends ChangeNotifier {
   Future<void> _processUserNotifications() async {
     bool isUserLoggedIn = await UserSession.instance.isLoginBool();
     if (isUserLoggedIn) {
-      getUserNotifications();
+      // getUserNotifications();
     }
   }
 
-  Future<void> _getUserSaveData() async {
-    final userJson = _storage.getString(USER_DATA);
-    if (userJson != null) {
-      if (_user == null) {
-        // saveUser(UserModel.fromJson(json.decode(userJson)));
-      }
-    }
-  }
+  // Future<void> _getUserSaveData() async {
+  //   final userJson = _storage.getString(USER_DATA);
+  //   if (userJson != null) {
+  //     if (_user == null) {
+  //       // saveUser(UserModel.fromJson(json.decode(userJson)));
+  //     }
+  //   }
+  // }
+  //
+  // Future<void> getUserNotifications() async {
+  //   if (_user != null) {
+  //     // NotificationService.instance.getNotifications(_user!.id, saveNotifications);
+  //   }
+  // }
 
-  Future<void> getUserNotifications() async {
-    if (_user != null) {
-      // NotificationService.instance.getNotifications(_user!.id, saveNotifications);
-    }
-  }
+  // UserModel? _user;
 
-  UserModel? _user;
+  // UserModel? get user => _user;
 
-  UserModel? get user => _user;
-
-  void saveUser(UserModel userInfo) {
-    // Save user data in SharedPreferences
-
-    final userJson = json.encode(userInfo.toJson());
-    _storage.setString(USER_DATA, userJson);
-
-    _user = userInfo;
-
-    handleCreateAccountCleanups();
-    notifyListeners();
-    // getUserNotifications();
-  }
+  // void saveUser(UserModel userInfo) {
+  //   // Save user data in SharedPreferences
+  //
+  //   final userJson = json.encode(userInfo.toJson());
+  //   _storage.setString(USER_DATA, userJson);
+  //
+  //   _user = userInfo;
+  //
+  //   handleCreateAccountCleanups();
+  //   notifyListeners();
+  //   // getUserNotifications();
+  // }
 
   void removeUser(){
-    _user = null;
+    // _user = null;
 
     _storage.remove(USER_DATA);
-    handleCreateAccountCleanups();
+    // handleCreateAccountCleanups();
   }
 
   // creating account
-  CreateAccountModel? _createAccountFormDetails;
-  bool _createAccountCanVerifyEmail = false;
-  String? _createAccountOtpId;
-
-  CreateAccountModel? get createAccountFormDetails => _createAccountFormDetails;
-  bool get createAccountCanVerifyEmail => _createAccountCanVerifyEmail;
-  String? get createAccountOtpId => _createAccountOtpId;
-
-  handleCreateUserEmailConfirmation(
-      {required CreateAccountModel formDetails, required String otpId}) {
-    _createAccountFormDetails = formDetails;
-    _createAccountCanVerifyEmail = true;
-    _createAccountOtpId = otpId;
-    notifyListeners();
-  }
-
-  handleCreateAccountCleanups() {
-    _createAccountFormDetails = null;
-    _createAccountCanVerifyEmail = false;
-    _createAccountOtpId = null;
-    notifyListeners();
-  }
-
-  // reset password
-  ChangePasswordModel? _resetPasswordDetails;
-
-  ChangePasswordModel? get resetPasswordDetails => _resetPasswordDetails;
-
-  saveResetPasswordDetails(ChangePasswordModel resetDetails) {
-    _resetPasswordDetails = resetDetails;
-    notifyListeners();
-  }
-
-  clearResetPasswordDetails() {
-    _resetPasswordDetails = null;
-    notifyListeners();
-  }
+  // CreateAccountModel? _createAccountFormDetails;
+  // bool _createAccountCanVerifyEmail = false;
+  // String? _createAccountOtpId;
+  //
+  // CreateAccountModel? get createAccountFormDetails => _createAccountFormDetails;
+  // bool get createAccountCanVerifyEmail => _createAccountCanVerifyEmail;
+  // String? get createAccountOtpId => _createAccountOtpId;
+  //
+  // handleCreateUserEmailConfirmation(
+  //     {required CreateAccountModel formDetails, required String otpId}) {
+  //   _createAccountFormDetails = formDetails;
+  //   _createAccountCanVerifyEmail = true;
+  //   _createAccountOtpId = otpId;
+  //   notifyListeners();
+  // }
+  //
+  // handleCreateAccountCleanups() {
+  //   _createAccountFormDetails = null;
+  //   _createAccountCanVerifyEmail = false;
+  //   _createAccountOtpId = null;
+  //   notifyListeners();
+  // }
+  //
+  // // reset password
+  // ChangePasswordModel? _resetPasswordDetails;
+  //
+  // ChangePasswordModel? get resetPasswordDetails => _resetPasswordDetails;
+  //
+  // saveResetPasswordDetails(ChangePasswordModel resetDetails) {
+  //   _resetPasswordDetails = resetDetails;
+  //   notifyListeners();
+  // }
+  //
+  // clearResetPasswordDetails() {
+  //   _resetPasswordDetails = null;
+  //   notifyListeners();
+  // }
 
 
 }
