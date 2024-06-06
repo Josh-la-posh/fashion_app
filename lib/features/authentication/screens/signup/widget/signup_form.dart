@@ -86,7 +86,7 @@ class _SignupFormState extends State<SignupForm> {
             ],
           ),
           const SizedBox(height: TSizes.spaceBtwElements,),
-          TElevatedButton(onTap: (){}, buttonText: 'SIGN UP')
+          SizedBox(height: 40, child: TElevatedButton(onTap: (){}, buttonText: 'SIGN UP'))
         ],
       ),
     );

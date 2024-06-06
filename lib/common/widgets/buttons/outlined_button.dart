@@ -15,20 +15,17 @@ class TOutlinedButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 48.0,
-      child: OutlinedButton(
-        style: OutlinedButton.styleFrom(
-          // side: BorderSide(color: borderColor)
-            backgroundColor: backgroundColor
-        ),
-        onPressed: onTap,
-        child: Center(
-          child: Text(
-            buttonText,
-            style: TextStyle(
-                color: textColor
-            ),
+    return OutlinedButton(
+      style: OutlinedButton.styleFrom(
+        // side: BorderSide(color: borderColor)
+          backgroundColor: backgroundColor
+      ),
+      onPressed: onTap,
+      child: Center(
+        child: Text(
+          buttonText,
+          style: TextStyle(
+              color: textColor
           ),
         ),
       ),

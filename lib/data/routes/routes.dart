@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:sytle_to_perfection/features/cart/routes/routes.dart';
+import 'package:sytle_to_perfection/features/dashboard/routes/routes.dart';
+import 'package:sytle_to_perfection/features/gallery/routes/routes.dart';
+import 'package:sytle_to_perfection/features/profile/routes/routes.dart';
 import '../../features/authentication/routes/routes.dart';
+import '../../features/measurement/routes/routes.dart';
 
 Route _createCustomRoute(Widget page) {
   return PageRouteBuilder(
@@ -23,6 +28,11 @@ Route _createCustomRoute(Widget page) {
 Map<String, WidgetBuilder> routes = {
   // ...splashRoutes,
   ...authRoutes,
+  ...dashboardRoutes,
+  ...cartRoutes,
+  ...galleryRoutes,
+  ...profileRoutes,
+  ...measureRoutes
 };
 
 

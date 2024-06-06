@@ -10,12 +10,12 @@ class TElevatedButtonTheme {
   static final lightElevatedButtonTheme = ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         elevation: 0,
-        foregroundColor: Colors.white,
+        foregroundColor: TColors.buttonText,
         backgroundColor: TColors.darkButton,
         disabledForegroundColor: Colors.grey,
         shape: RoundedRectangleBorder(side: BorderSide.none),
           // disabledBackgroundColor: TColors.primaryButton.withOpacity(0.4),
-        textStyle: const TextStyle(fontSize: TSizes.fontSize16, color: TColors.textWhite, fontWeight: TSizes.fontWeight400, fontFamily: TTexts.fontFamily),
+        textStyle: const TextStyle(fontSize: TSizes.fontSize16, color: TColors.buttonText, fontWeight: TSizes.fontWeight400, fontFamily: TTexts.fontFamily),
       )
   );
 

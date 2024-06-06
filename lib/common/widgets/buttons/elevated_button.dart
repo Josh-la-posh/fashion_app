@@ -11,12 +11,9 @@ class TElevatedButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 40.0,
-      child: ElevatedButton(
-        onPressed: onTap,
-        child: Center(child: Text(buttonText),),
-      ),
+    return ElevatedButton(
+      onPressed: onTap,
+      child: Center(child: Text(buttonText),),
     );
   }
 }

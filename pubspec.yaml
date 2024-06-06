@@ -52,7 +52,10 @@ flutter:
   assets:
     - assets/logos/
     - assets/icons/
+    - assets/icons/dashboard/
+    - assets/icons/measurement/
     - assets/images/
+    - assets/images/dashboard/
 
   #------------- LOCAL FONTS ----------------#
 

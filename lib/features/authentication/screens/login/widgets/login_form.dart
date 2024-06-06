@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sytle_to_perfection/common/widgets/buttons/elevated_button.dart';
 import 'package:sytle_to_perfection/features/authentication/screens/signup/signup.dart';
+import 'package:sytle_to_perfection/features/dashboard/screens/home.dart';
 import 'package:sytle_to_perfection/utils/constants/sizes.dart';
+import 'package:sytle_to_perfection/utils/layouts/navigation_menu.dart';
 
 import '../../../../../utils/constants/colors.dart';
 
@@ -77,7 +79,13 @@ class _LoginFormState extends State<LoginForm> {
               ],
             ),
             const SizedBox(height: TSizes.spaceBtwElements,),
-            TElevatedButton(onTap: (){}, buttonText: 'SIGN IN')
+            SizedBox(
+              height: 40,
+              child: TElevatedButton(
+                  onTap: (){Get.to(() => const HomeScreen());},
+                  buttonText: 'SIGN IN'
+              ),
+            )
           ],
         ),
     );

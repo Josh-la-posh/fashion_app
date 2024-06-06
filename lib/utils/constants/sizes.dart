@@ -87,4 +87,7 @@ class TSizes {
   // Icon left size
   static const double iconBackSize = 23.0;
 
+  // Grid spacing
+  static const double gridViewSpacing = 10.0;
+
 }

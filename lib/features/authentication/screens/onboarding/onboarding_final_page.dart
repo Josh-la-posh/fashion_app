@@ -34,18 +34,18 @@ class OnboardingFinalScreen extends StatelessWidget {
                   width: 345,
                   child: OutlinedButton(
                     style: OutlinedButton.styleFrom(
-                      shape: RoundedRectangleBorder(side: BorderSide.none)
+                      shape: const RoundedRectangleBorder(side: BorderSide.none)
                     ),
                       onPressed: (){},
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          SizedBox(
+                          const SizedBox(
                             height: 24,
                             width: 24,
-                            child: const Image(image: AssetImage(TImages.google)),
+                            child: Image(image: AssetImage(TImages.google)),
                           ),
-                          SizedBox(width: 15,),
+                          const SizedBox(width: 15,),
                           RichText(
                               text: TextSpan(
                                   style: Theme.of(context).textTheme.bodyMedium,
@@ -63,24 +63,24 @@ class OnboardingFinalScreen extends StatelessWidget {
                       ),
                   ),
                 ),
-                SizedBox(height: TSizes.spaceBtwElements),
+                const SizedBox(height: TSizes.spaceBtwElements),
                 SizedBox(
                   height: 54,
                   width: 345,
                   child: OutlinedButton(
                     style: OutlinedButton.styleFrom(
-                        shape: RoundedRectangleBorder(side: BorderSide.none)
+                        shape: const RoundedRectangleBorder(side: BorderSide.none)
                     ),
                     onPressed: (){},
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        SizedBox(
+                        const SizedBox(
                           height: 24,
                           width: 24,
-                          child: const Image(image: AssetImage(TImages.facebook)),
+                          child: Image(image: AssetImage(TImages.facebook)),
                         ),
-                        SizedBox(width: 15,),
+                        const SizedBox(width: 15,),
                         RichText(
                             text: TextSpan(
                                 style: Theme.of(context).textTheme.bodyMedium,
@@ -98,13 +98,13 @@ class OnboardingFinalScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: TSizes.spaceBtwElements * 1.5),
-                Container(
+                const SizedBox(height: TSizes.spaceBtwElements * 1.5),
+                const SizedBox(
                   width: 150,
                   child: Image(image: AssetImage(TImages.onboardingDivider)),
                 ),
-                SizedBox(height: TSizes.spaceBtwElements * 1.5),
-                Container(
+                const SizedBox(height: TSizes.spaceBtwElements * 1.5),
+                SizedBox(
                     height: 40,
                     width: 345,
                     child: TElevatedButton(
@@ -114,7 +114,7 @@ class OnboardingFinalScreen extends StatelessWidget {
                         buttonText: 'SIGN IN WITH PASSWORD'
                     )
                 ),
-                SizedBox(height: TSizes.spaceBtwElements),
+                const SizedBox(height: TSizes.spaceBtwElements),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
