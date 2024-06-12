@@ -56,6 +56,7 @@ flutter:
     - assets/icons/measurement/
     - assets/images/
     - assets/images/dashboard/
+    - assets/images/measurement/
 
   #------------- LOCAL FONTS ----------------#
 

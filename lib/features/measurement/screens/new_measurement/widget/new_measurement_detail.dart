@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../../../utils/constants/colors.dart';
-import '../../../../utils/constants/images.dart';
-import '../../../../utils/constants/sizes.dart';
+import '../../../../../utils/constants/colors.dart';
+import '../../../../../utils/constants/images.dart';
+import '../../../../../utils/constants/sizes.dart';
 
 class NewMeasurementDetailContainer extends StatelessWidget {
   final String title, note, measurement, image;

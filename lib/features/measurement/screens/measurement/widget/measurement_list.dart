@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../utils/constants/sizes.dart';
+import '../../../../../utils/constants/sizes.dart';
 import 'measurement_list_container.dart';
 
 class MeasurementListWidget extends StatelessWidget {
@@ -20,7 +20,7 @@ class MeasurementListWidget extends StatelessWidget {
           mainAxisSpacing: TSizes.gridViewSpacing,
           mainAxisExtent: 96
         ),
-        itemBuilder: (_, index) => MeasurementListContainer()
+        itemBuilder: (_, index) => const MeasurementListContainer()
 
     );
   }

@@ -19,10 +19,17 @@ class TColors {
   static const Color itemNameColor = Color(0xFF6E6E70);
   static const Color saveMeasurementText = Color(0xFF717171);
   static const Color saveMeasurementGreyText = Color(0xFFA4AAB2);
+  static const Color tabBarGreyText = Color(0xFFA4AAB2);
+  static const Color addressText = Color(0xFF575758);
+  static const Color modalSheetLabel = Color(0xFFB7B7B8);
 
   // Background Container Colors
   static const Color searchBarBackground = Color(0xFFF3F3F3);
   static const Color imageBackground = Color(0xFFF6E7D7);
+  static const Color measurementBgColor = Color(0xFF3F4136);
+  static const Color checkoutAmountBg = Color(0xFFEFEDFC);
+  static const Color selectBg = Color(0xFF5E604D);
+  static const Color dividerBg = Color(0xFFE7E7E8);
 
 
   //Button Colors
@@ -33,6 +40,7 @@ class TColors {
   // Border Colors
   static const Color borderColor = Color(0xFFDEDEDE);
   static const Color formBorderColor = Color(0xFFDDDDDD);
+  static const Color fixedPatternBd = Color(0xFFDBDADE);
 
   // Error and Validation Colors
 

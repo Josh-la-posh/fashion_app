@@ -3,7 +3,7 @@ import 'package:sytle_to_perfection/utils/constants/colors.dart';
 import 'package:sytle_to_perfection/utils/helpers/helper_functions.dart';
 
 import '../../styles/spacing_style.dart';
-import 'elevated_button.dart';
+import '../buttons/elevated_button.dart';
 
 class ScaffoldWithFloatingButton extends StatelessWidget {
   final PreferredSizeWidget appBar;

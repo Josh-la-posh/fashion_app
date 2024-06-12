@@ -1,16 +1,14 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
-import 'package:sytle_to_perfection/utils/constants/colors.dart';
+import 'package:get/get_core/src/get_main.dart';
+import '../../../../../common/widgets/buttons/elevated_button.dart';
+import '../../../../../common/widgets/buttons/outlined_button.dart';
+import '../../../../../utils/constants/colors.dart';
+import '../../../../../utils/constants/sizes.dart';
+import '../../../../../utils/constants/texts.dart';
 
-import '../../../../common/widgets/buttons/elevated_button.dart';
-import '../../../../common/widgets/buttons/outlined_button.dart';
-import '../../../../utils/constants/sizes.dart';
-import '../../../../utils/constants/texts.dart';
-
-class SaveBottomSheetModal extends StatelessWidget {
-  const SaveBottomSheetModal({super.key});
+class DiscountCouponSheet extends StatelessWidget {
+  const DiscountCouponSheet({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,12 +22,12 @@ class SaveBottomSheetModal extends StatelessWidget {
           children: [
             RichText(
                 text: TextSpan(
-                    style: Theme.of(context).textTheme.titleMedium,
+                    style: Theme.of(context).textTheme.bodyMedium,
                     children: const <TextSpan> [
                       TextSpan(
-                          text: 'Save measurement',
+                          text: 'Discount coupon',
                           style: TextStyle(
-                              fontSize: 20,
+                            fontSize: 18,
                           )
                       )
                     ]
@@ -44,7 +42,7 @@ class SaveBottomSheetModal extends StatelessWidget {
                         style: Theme.of(context).textTheme.labelSmall,
                         children: const <TextSpan> [
                           TextSpan(
-                              text: 'Title',
+                              text: 'Coupon code',
                               style: TextStyle(
                                 color: TColors.saveMeasurementText,
                               )
@@ -55,33 +53,19 @@ class SaveBottomSheetModal extends StatelessWidget {
                 // const SizedBox(height: TSizes.spaceBtwItems,),
                 TextFormField(
                     decoration: const InputDecoration(
-                      contentPadding: EdgeInsets.all(0),
-                      hoverColor: Colors.transparent,
+                        contentPadding: EdgeInsets.all(0),
+                        hoverColor: Colors.transparent,
                         fillColor: Colors.transparent,
-                        hintText: 'Give this measurement a title',
+                        hintText: '000 - 000 - 000 - 000',
                         hintStyle: TextStyle(
-                          color: TColors.saveMeasurementText,
-                          fontWeight: TSizes.fontWeight400,
-                          fontSize: 16,
-                          fontFamily: TTexts.fontFamily
+                            color: TColors.modalSheetLabel,
+                            fontWeight: TSizes.fontWeight400,
+                            fontSize: 16,
+                            fontFamily: TTexts.fontFamily
                         )
                       // labelText: 'Title'
                     )
                 ),
-              ],
-            ),
-            const SizedBox(height: TSizes.spaceBtwElements,),
-            Row(
-              children: [
-                Text(
-                  'You can name it after the owner of the measurement',
-                  style: TextStyle(
-                      color: TColors.saveMeasurementGreyText,
-                      fontWeight: TSizes.fontWeight400,
-                      fontSize: 14,
-                      fontFamily: TTexts.fontFamily
-                  ),
-                )
               ],
             ),
             const SizedBox(height: TSizes.spaceBtwElements,),
@@ -92,7 +76,7 @@ class SaveBottomSheetModal extends StatelessWidget {
                       height: 48,
                       child: TOutlinedButton(
                           onTap: (){Get.back();},
-                          buttonText: 'CANCEL')
+                          buttonText: 'Cancel')
                   ),
                 ),
                 const SizedBox(width: 9,),
@@ -100,8 +84,10 @@ class SaveBottomSheetModal extends StatelessWidget {
                   child: SizedBox(
                       height: 48,
                       child: TElevatedButton(
-                          onTap: (){},
-                          buttonText: 'SAVE'
+                          onTap: (){
+                            // Get.to(() => ShippingAddressScreen());
+                            },
+                          buttonText: 'Enter'
                       )
                   ),
                 )

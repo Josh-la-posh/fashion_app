@@ -49,6 +49,8 @@ class _AppLayoutState extends State<AppLayout>
   final ScrollController _scrollController = ScrollController();
   bool _isBottomBarVisible = true;
 
+  bool _showBottomSheet = false;
+
   final List<String> items = List.generate(30, (index) => 'Item ${index + 1}');
 
   @override
@@ -114,7 +116,20 @@ class _AppLayoutState extends State<AppLayout>
               Get.to(() => const CartScreen());
             }
           } else if (index == 2) {
-
+            showModalBottomSheet(
+              context: context,
+              isScrollControlled: true,
+              backgroundColor: Colors.blueGrey,
+              builder: (ctx) {
+                return DraggableScrollableSheet(
+                  expand: false,
+                    builder: (_, _scrollController) {
+                  return MenuScreen();
+                });
+              },
+              useRootNavigator: true,
+            );
+          } else if (index == 3) {
             if (widget.navKey != null) {
               if (widget.currentRoute != RouteType.Menu) {
                 widget.navKey!.currentState!
@@ -126,19 +141,7 @@ class _AppLayoutState extends State<AppLayout>
               // );
               Get.to(() => const GalleryScreen());
             }
-          } else if (index == 3) {
 
-            if (widget.navKey != null) {
-              if (widget.currentRoute != RouteType.Gallery) {
-                widget.navKey!.currentState!
-                    .pushNamed(GALLERY_INDEX_SCREEN_ROUTE);
-              }
-            } else {
-              // AppNavigator.instance.navigateToHandler(
-              //     GALLERY_INDEX_SCREEN_ROUTE
-              // );
-              Get.to(() => const GalleryScreen());
-            }
           } else if (index == 4) {
             // Get.to(const ProfileScreen());
 
@@ -174,7 +177,7 @@ class _AppLayoutState extends State<AppLayout>
           BottomNavigationBarItem(backgroundColor: TColors.danger,
             icon: Container(
               height: 20,
-              child: Icon(Icons.home),
+              child: const Icon(Icons.home),
             ),
             label: 'Home',
           ),
@@ -187,12 +190,24 @@ class _AppLayoutState extends State<AppLayout>
           BottomNavigationBarItem(
             icon: IconButton(
                 onPressed: (){
-                  showModalBottomSheet(
-                      context: context,
-                      builder: (ctx) => MenuScreen()
-                  );
+                  setState(() {
+                    _showBottomSheet = !_showBottomSheet;
+                    print(_showBottomSheet);
+                  });
                 },
-                icon: Icon(Icons.add)
+                style: ButtonStyle(
+                  backgroundColor: _showBottomSheet == false 
+                      ? MaterialStatePropertyAll(Color(0xFF5E604D))
+                      : MaterialStatePropertyAll(Color(0xFFDCDDD5)),
+                  fixedSize: MaterialStatePropertyAll(Size(48, 48)),
+                  alignment: Alignment.center,
+                  iconSize: _showBottomSheet == false
+                      ?  MaterialStatePropertyAll(20)
+                      : MaterialStatePropertyAll(28)
+                ),
+                icon: _showBottomSheet == false
+                    ? Icon(Icons.add, color: Colors.white,)
+                    : Icon(Icons.close, color: Color(0xFF535544),)
             ),
             label: ''
           ),

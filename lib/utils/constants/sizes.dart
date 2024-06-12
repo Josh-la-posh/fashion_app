@@ -9,6 +9,7 @@ class TSizes {
   static const double md = 8.0;
   static const double lg = 14.0;
   static const double xl = 22.0;
+  static const double paddingSize = 25.0;
 
   // Icon sizes
   static const double iconXs = 12.0;

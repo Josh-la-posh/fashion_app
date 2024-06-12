@@ -2,33 +2,27 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sytle_to_perfection/common/styles/spacing_style.dart';
-import 'package:sytle_to_perfection/common/widgets/buttons/scaffold_with_floating_button.dart';
-import 'package:sytle_to_perfection/features/measurement/screens/new_measurement.dart';
-import 'package:sytle_to_perfection/features/measurement/screens/widgets/measurement_list.dart';
-import 'package:sytle_to_perfection/features/measurement/screens/widgets/no_measurement.dart';
+import 'package:sytle_to_perfection/common/widgets/layout/scaffold_with_floating_button.dart';
+import 'package:sytle_to_perfection/features/measurement/screens/new_measurement/new_measurement.dart';
+import 'package:sytle_to_perfection/features/measurement/screens/measurement/widget/measurement_list.dart';
+import 'package:sytle_to_perfection/features/measurement/screens/measurement/widget/no_measurement.dart';
 import 'package:sytle_to_perfection/features/measurement/screens/widgets/search_and_settings.dart';
 import 'package:sytle_to_perfection/utils/constants/images.dart';
 import 'package:sytle_to_perfection/utils/constants/sizes.dart';
+
+import '../../../../common/widgets/layout/appbar_with_action_button.dart';
 
 class MeasurementScreen extends StatelessWidget {
   const MeasurementScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    int measurement = 1;
+    int measurement = 2;
     return ScaffoldWithFloatingButton(
-        appBar: AppBar(
-          title: Text(
-            'My Measurements',
-            style: Theme.of(context).textTheme.titleMedium,
-          ),
-          centerTitle: true,
-          leading: IconButton(onPressed: () {Get.back();}, icon: const Image(image: AssetImage(TImages.arrowLeft))),
-          actions: <Widget>[
-            IconButton(
-                onPressed: (){},
-                icon: const Image(image: AssetImage(TImages.download)))
-          ],
+        appBar: AppbarWithActionButton(
+            title: 'My Measurement',
+            actionImage: TImages.download,
+            actionOnpressed: (){}
         ),
         body: SingleChildScrollView(
           child: Padding(

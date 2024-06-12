@@ -46,4 +46,8 @@ class TImages {
   static const String download = "assets/icons/measurement/download.png";
   static const String settings = "assets/icons/measurement/settings.png";
   static const String emptyMeasurement = "assets/icons/measurement/noMeasurement.png";
+
+    // Measurement Image
+    static const String measurementImage = "assets/images/measurement/measurementImage.png";
+    static const String dressRoomImg = "assets/images/measurement/dressRoomImg.png";
 }

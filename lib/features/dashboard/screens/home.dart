@@ -4,7 +4,7 @@ import 'package:sytle_to_perfection/common/styles/spacing_style.dart';
 import 'package:sytle_to_perfection/features/dashboard/screens/widget/layout.dart';
 import 'package:sytle_to_perfection/features/dashboard/screens/widget/list_categories.dart';
 import 'package:sytle_to_perfection/features/dashboard/screens/widget/spotlight.dart';
-import 'package:sytle_to_perfection/features/measurement/screens/measurement.dart';
+import 'package:sytle_to_perfection/features/measurement/screens/measurement/measurement.dart';
 import 'package:sytle_to_perfection/utils/constants/images.dart';
 import 'package:sytle_to_perfection/utils/constants/sizes.dart';
 import 'package:sytle_to_perfection/utils/helpers/helper_functions.dart';

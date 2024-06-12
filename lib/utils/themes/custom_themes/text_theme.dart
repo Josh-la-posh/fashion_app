@@ -15,8 +15,8 @@ class TTextTheme {
     // titleSmall: const TextStyle().copyWith(fontSize: TSizes.fontSize16, fontWeight: TSizes.fontWeightNm, color: TColors.textPrimaryO80, fontFamily: TTexts.fontFamily, letterSpacing: TSizes.letterSpacingSm, height: TSizes.lineHeight24 / TSizes.fontSize16),
     //
     // bodyLarge: const TextStyle().copyWith(fontSize: TSizes.fontSize20, fontWeight: TSizes.fontWeightNm, color: TColors.textPrimaryO80, fontFamily: TTexts.fontFamily, letterSpacing :TSizes.letterSpacingSm),
-    bodyMedium: const TextStyle().copyWith(fontSize: TSizes.fontSize16, fontWeight: TSizes.fontWeight400, color: TColors.textBlack, fontFamily: TTexts.fontFamily, letterSpacing: TSizes.letterSpacingSm),
-    // bodySmall: const TextStyle().copyWith(fontSize: TSizes.fontSize10, fontWeight: TSizes.fontWeightMd, color: TColors.textCurrency, fontFamily: TTexts.fontFamily, letterSpacing: TSizes.letterSpacingSm),
+    bodyMedium: const TextStyle().copyWith(fontSize: TSizes.fontSize16, fontWeight: TSizes.fontWeight400, color: TColors.primary, fontFamily: TTexts.fontFamily, letterSpacing: TSizes.letterSpacingSm),
+    bodySmall: const TextStyle().copyWith(fontSize: TSizes.fontSize14, fontWeight: TSizes.fontWeight400, color: TColors.primary, fontFamily: TTexts.fontFamily, letterSpacing: TSizes.letterSpacingSm),
     //
     // // bodyText1: const TextStyle().copyWith(fontSize: TSizes.fontSize14, fontWeight: TSizes.fontWeightMd, color: TColors.textPrimaryO80, fontFamily: TTexts.fontFamily, letterSpacing: TSizes.letterSpacingSm),
     //
@@ -35,7 +35,7 @@ class TTextTheme {
     //
     // bodyLarge: const TextStyle().copyWith(fontSize: TSizes.fontSize20, fontWeight: TSizes.fontWeightNm, color: TColors.textPrimaryO80, fontFamily: TTexts.fontFamily, letterSpacing: TSizes.letterSpacingSm),
     bodyMedium: const TextStyle().copyWith(fontSize: TSizes.fontSize16, fontWeight: TSizes.fontWeight400, color: TColors.white, fontFamily: TTexts.fontFamily, letterSpacing: TSizes.letterSpacingSm),
-    // bodySmall: const TextStyle().copyWith(fontSize: TSizes.fontSize10, fontWeight: TSizes.fontWeightMd, color: TColors.white, fontFamily: TTexts.fontFamily, letterSpacing: TSizes.letterSpacingSm),
+    bodySmall: const TextStyle().copyWith(fontSize: TSizes.fontSize14, fontWeight: TSizes.fontWeight400, color: TColors.white, fontFamily: TTexts.fontFamily, letterSpacing: TSizes.letterSpacingSm),
     //
     // // bodyText1: const TextStyle().copyWith(fontSize: TSizes.fontSize14, fontWeight: TSizes.fontWeightMd, color: TColors.textSecondary, fontFamily: TTexts.fontFamily, letterSpacing: TSizes.letterSpacingSm),
     //

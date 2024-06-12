@@ -6,7 +6,10 @@ class MenuScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      child: Text('I am working'),
+      child: Container(
+        height: 200,
+        child: Text('I am working'),
+      ),
     );
   }
 }

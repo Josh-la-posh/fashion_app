@@ -12,7 +12,7 @@ class TOutlinedButtonTheme {
         foregroundColor: TColors.black,
         backgroundColor: TColors.white,
         side: const BorderSide(color: TColors.borderColor),
-        shape: RoundedRectangleBorder(side: BorderSide.none),
+        shape: RoundedRectangleBorder(borderRadius:BorderRadius.circular(8)),
         textStyle: const TextStyle(fontSize: TSizes.fontSize16, color: TColors.textBlack, fontWeight: TSizes.fontWeight600, fontFamily: TTexts.fontFamily),
       )
   );
@@ -23,6 +23,7 @@ class TOutlinedButtonTheme {
         foregroundColor: TColors.white,
         backgroundColor: TColors.black,
         side: const BorderSide(color: TColors.white),
+        shape: RoundedRectangleBorder(borderRadius:BorderRadius.circular(8)),
         textStyle: const TextStyle(fontSize: TSizes.fontSize16, color: TColors.white, fontWeight: TSizes.fontWeight600, fontFamily: TTexts.fontFamily),
       )
   );
