@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 
 import '../../utils/constants/colors.dart';
+import '../../utils/constants/images.dart';
 
 class SearchBarWidget extends StatelessWidget {
-  const SearchBarWidget({
+  String? placeholder;
+  SearchBarWidget({
     super.key,
+    this.placeholder
   });
 
   @override
@@ -22,9 +25,9 @@ class SearchBarWidget extends StatelessWidget {
           RichText(
               text: TextSpan(
                   style: Theme.of(context).textTheme.bodyMedium,
-                  children: const [
+                  children: [
                     TextSpan(
-                        text: 'Search ...',
+                        text: placeholder ?? 'Search on S to P',
                         style: TextStyle(
                             color: TColors.itemNameColor
                         )
@@ -32,7 +35,7 @@ class SearchBarWidget extends StatelessWidget {
                   ]
               )
           ),
-          const Icon(Icons.search, color: TColors.itemNameColor, size: 24,),
+          Image(image: AssetImage(TImages.search))
         ],
       ),
     );

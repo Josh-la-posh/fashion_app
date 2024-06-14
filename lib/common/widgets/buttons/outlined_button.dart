@@ -23,6 +23,7 @@ class TOutlinedButton extends StatelessWidget {
       onPressed: onTap,
       child: Center(
         child: Text(
+          textAlign: TextAlign.center,
           buttonText,
           style: TextStyle(
               color: textColor

@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sytle_to_perfection/common/widgets/buttons/elevated_button.dart';
-import 'package:sytle_to_perfection/features/authentication/screens/signup/signup.dart';
-import 'package:sytle_to_perfection/features/dashboard/screens/home.dart';
 import 'package:sytle_to_perfection/utils/constants/sizes.dart';
-import 'package:sytle_to_perfection/utils/layouts/navigation_menu.dart';
-
 import '../../../../../utils/constants/colors.dart';
+import '../../../../designer/dashboard/screens/home.dart';
 
 class LoginForm extends StatefulWidget {
   const LoginForm({super.key});
@@ -62,11 +59,11 @@ class _LoginFormState extends State<LoginForm> {
                       }
                   ),
                 ),
-                SizedBox(width: TSizes.spaceBtwButtons,),
+                const SizedBox(width: TSizes.spaceBtwButtons,),
                 RichText(
                     text: TextSpan(
                         style: Theme.of(context).textTheme.bodyMedium,
-                        children: [
+                        children: const [
                           TextSpan(
                               text: 'Remember me',
                               style: TextStyle(

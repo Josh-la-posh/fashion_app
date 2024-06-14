@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:sytle_to_perfection/features/cart/routes/routes.dart';
-import 'package:sytle_to_perfection/features/dashboard/routes/routes.dart';
-import 'package:sytle_to_perfection/features/gallery/routes/routes.dart';
-import 'package:sytle_to_perfection/features/profile/routes/routes.dart';
+import 'package:sytle_to_perfection/features/tailor/cart/routes/routes.dart';
+import 'package:sytle_to_perfection/features/tailor/dashboard/routes/routes.dart';
 import '../../features/authentication/routes/routes.dart';
-import '../../features/measurement/routes/routes.dart';
+import '../../features/designer/cart/routes/routes.dart';
+import '../../features/designer/dashboard/routes/routes.dart';
+import '../../features/designer/gallery/routes/routes.dart';
+import '../../features/designer/measurement/routes/routes.dart';
+import '../../features/designer/profile/routes/routes.dart';
+import '../../features/designer/tailor/routes/routes.dart';
 
 Route _createCustomRoute(Widget page) {
   return PageRouteBuilder(
@@ -32,7 +35,10 @@ Map<String, WidgetBuilder> routes = {
   ...cartRoutes,
   ...galleryRoutes,
   ...profileRoutes,
-  ...measureRoutes
+  ...measureRoutes,
+  ...tailorRoutes,
+  ...tailorDashboardRoutes,
+  ...tailorCartRoutes
 };
 
 

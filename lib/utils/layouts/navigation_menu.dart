@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:sytle_to_perfection/features/cart/screens/cart.dart';
-import 'package:sytle_to_perfection/features/gallery/screens/gallery.dart';
 import 'package:sytle_to_perfection/utils/constants/colors.dart';
-import '../../features/dashboard/screens/home.dart';
-import '../../features/profile/screens/profile.dart';
+import '../../features/designer/cart/screens/cart.dart';
+import '../../features/designer/dashboard/screens/home.dart';
+import '../../features/designer/gallery/screens/gallery.dart';
+import '../../features/designer/profile/screens/profile.dart';
 import '../constants/images.dart';
 import '../constants/sizes.dart';
 

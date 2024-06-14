@@ -20,7 +20,7 @@ class OnboardingPage extends StatelessWidget {
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage(image),
-            fit: BoxFit.contain,
+            fit: BoxFit.fill,
           ),
         ),
         child:

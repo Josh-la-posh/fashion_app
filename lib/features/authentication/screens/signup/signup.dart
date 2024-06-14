@@ -61,7 +61,7 @@ class SignupScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: THelperFunctions.screenHeight() * 0.04),
+                  SizedBox(height: THelperFunctions.screenHeight() * 0.1),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [

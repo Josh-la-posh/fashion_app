@@ -1,16 +1,16 @@
 // ignore_for_file: constant_identifier_names
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:sytle_to_perfection/features/cart/routes/names.dart';
-import 'package:sytle_to_perfection/features/cart/screens/cart.dart';
-import 'package:sytle_to_perfection/features/dashboard/screens/home.dart';
-import 'package:sytle_to_perfection/features/gallery/routes/names.dart';
-import 'package:sytle_to_perfection/features/gallery/screens/gallery.dart';
-import 'package:sytle_to_perfection/features/menu/screens/menu.dart';
-import 'package:sytle_to_perfection/features/profile/screens/profile.dart';
 import 'package:sytle_to_perfection/utils/constants/sizes.dart';
-import '../../features/dashboard/routes/names.dart';
-import '../../features/profile/routes/names.dart';
+import '../../features/designer/cart/routes/names.dart';
+import '../../features/designer/cart/screens/cart.dart';
+import '../../features/designer/dashboard/routes/names.dart';
+import '../../features/designer/dashboard/screens/home.dart';
+import '../../features/designer/gallery/routes/names.dart';
+import '../../features/designer/gallery/screens/gallery.dart';
+import '../../features/designer/menu/screens/menu.dart';
+import '../../features/designer/profile/routes/names.dart';
+import '../../features/designer/profile/screens/profile.dart';
 import '../constants/colors.dart';
 import '../constants/images.dart';
 
@@ -116,19 +116,6 @@ class _AppLayoutState extends State<AppLayout>
               Get.to(() => const CartScreen());
             }
           } else if (index == 2) {
-            showModalBottomSheet(
-              context: context,
-              isScrollControlled: true,
-              backgroundColor: Colors.blueGrey,
-              builder: (ctx) {
-                return DraggableScrollableSheet(
-                  expand: false,
-                    builder: (_, _scrollController) {
-                  return MenuScreen();
-                });
-              },
-              useRootNavigator: true,
-            );
           } else if (index == 3) {
             if (widget.navKey != null) {
               if (widget.currentRoute != RouteType.Menu) {
@@ -203,7 +190,8 @@ class _AppLayoutState extends State<AppLayout>
                   alignment: Alignment.center,
                   iconSize: _showBottomSheet == false
                       ?  MaterialStatePropertyAll(20)
-                      : MaterialStatePropertyAll(28)
+                      : MaterialStatePropertyAll(28),
+
                 ),
                 icon: _showBottomSheet == false
                     ? Icon(Icons.add, color: Colors.white,)
@@ -226,10 +214,18 @@ class _AppLayoutState extends State<AppLayout>
         ],
       ),
       // drawer: AppDrawerWidget(),
-      body: SingleChildScrollView(
-        keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
-        controller: _scrollController,
-        child: widget.childWidget,
+      body: Stack(
+        children: [
+          SingleChildScrollView(
+            keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
+            controller: _scrollController,
+            child: widget.childWidget,
+          ),
+          if (_showBottomSheet == true)
+          Positioned(
+              child: MenuScreen()
+          )
+        ],
       ),
       floatingActionButton: widget.floatingActionButton,
     );

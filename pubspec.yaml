@@ -54,6 +54,8 @@ flutter:
     - assets/icons/
     - assets/icons/dashboard/
     - assets/icons/measurement/
+    - assets/icons/others/
+    - assets/icons/tailor/
     - assets/images/
     - assets/images/dashboard/
     - assets/images/measurement/

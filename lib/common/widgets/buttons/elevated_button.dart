@@ -13,7 +13,12 @@ class TElevatedButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: onTap,
-      child: Center(child: Text(buttonText),),
+      child: Center(
+        child: Text(
+            buttonText,
+          textAlign: TextAlign.center,
+        ),
+      ),
     );
   }
 }
